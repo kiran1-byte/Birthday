@@ -1,2 +1,108 @@
-# Birthday
-My friend
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday Wishes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            max-width: 700px;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.2em;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #3317DD, 0 0 20px #6FFFFA, 0 0 30px #31D0D5;
+            }
+            to {
+                text-shadow: 0 0 20px #ff3c78, 0 0 30px #ff3c78, 0 0 40px #ff3c78;
+            }
+        }
+        #photo {
+            max-width: 250px;
+            border-radius: 50%;
+            margin: 20px 0;
+            border: 5px solid #6FEEFF;
+            box-shadow: 0 0 15px rgba(111, 174, 255, 0.43);
+        }
+        p {
+            font-size: 1.3em;
+            margin-top: 0;
+        }
+        #info {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #ffd6e8;
+            text-align: center;
+        }
+        button {
+            margin-top: 25px;
+            font-size: 1.2em;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ff6f91;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 111, 145, 0.5);
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff3c78;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday!</h1>
+        <img id="photo" src="/Original photo with 'Happy Birthday Khaja' text and festive decorations added" alt="Friend's Photo" />
+        <p id="wishText">Wishing you a day filled with love and happiness.</p>
+        <button onclick="showWish()">Click for a Special Wish</button>
+        <div id="info">
+            <!-- Replace below with your friend's special information -->
+            <p><h3> Famous People born on the same day 04-09</h3>
+            
+Kristen Stewart (April 9, 1990 - Los Angeles, California, USA) - Famous for her role as Bella Swan in the Twilight movies.
+Jesse McCartney (April 9, 1987 - New York City, New York, USA) - Well-known singer and actor, famous for songs like "Beautiful Soul."
+Paulina Porizkova (April 9, 1965 - Prostejov, Czech Republic) - Supermodel and actress, known for her work in the fashion industry.
+Jenna Jameson (April 9, 1974 - Las Vegas, Nevada, USA) - Former adult film actress turned entrepreneur and media personality.
+Dennis Quaid (April 9, 1954 - Houston, Texas, USA) - Award-winning actor known for his roles in movies like "The Parent Trap" and "The Day After Tomorrow."</p>
+        </div>
+    </div>
+
+    <script>
+        const wishes = [
+            "May all your dreams come true!",
+            "Have a fantastic birthday filled with joy!",
+            "Wishing you endless happiness and success.",
+            "Enjoy your special day to the fullest!",
+            "Cheers to another year of awesomeness!"
+        ];
+
+        function showWish() {
+            const index = Math.floor(Math.random() * wishes.length);
+            document.getElementById('wishText').innerText = wishes[index];
+        }
+    </script>
+</body>
+</html>
+
